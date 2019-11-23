@@ -4,7 +4,7 @@ require_relative 'lib/game'
 # 1. Поприветствовать пользователя
 puts 'Всем привет!'
 # 2. Загрузить случайное слово из файла
-word = File.readlines(__dir__ + '/data/words.txt', chomp: true).sample
+word = File.readlines(__dir__ + '/data/words.txt', chomp: true).sample.upcase
 game = Game.new(word)
 
 console_interface = ConsoleInterface.new(game)
